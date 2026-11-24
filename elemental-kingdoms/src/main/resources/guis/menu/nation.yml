@@ -1,0 +1,133 @@
+title: '&8ᴋɪɴɢᴅᴏᴍ  ›  ɴᴀᴛɪᴏɴ'
+rows: 4
+sound: UI_BUTTON_CLICK, 0.4, 1.4
+
+options:
+  nexus:
+    has:
+      condition: kingdoms_has_nation
+      name: '{#FFD166}&lNation Nexus'
+      material: BEACON
+      flags: [ ALL ]
+      lore: |
+        &7The nexus of %kingdoms_nation_name%.
+
+        {#FFD166}» &fClick to open
+      commands:
+        - 'k menu open nation-nexus'
+    else:
+      name: '{#FFD166}&lCreate a Nation'
+      material: NETHER_STAR
+      flags: [ ALL ]
+      lore: |
+        &7Found a nation and invite
+        &7other kingdoms to it.
+
+        {#FFD166}» &fClick and type a name
+      commands:
+        - 'k menu prompt nation-create'
+    posx: 3
+    posy: 2
+  info:
+    has:
+      condition: kingdoms_has_nation
+      name: '{#FFD166}&lNation Info'
+      material: BOOK
+      flags: [ ALL ]
+      lore: |
+        &7Details about %kingdoms_nation_name%.
+
+        {#FFD166}» &fClick to show
+      commands:
+        - 'k menu run nation show'
+    else:
+      name: '{#FFD166}&lJoin a Nation'
+      material: OAK_DOOR
+      flags: [ ALL ]
+      lore: |
+        &7Join a nation that
+        &7invited your kingdom.
+
+        {#FFD166}» &fClick and type its name
+      commands:
+        - 'k menu prompt nation-join'
+    posx: 5
+    posy: 2
+  invite:
+    has:
+      condition: kingdoms_has_nation
+      name: '{#FFD166}&lInvite a Kingdom'
+      material: NAME_TAG
+      flags: [ ALL ]
+      lore: |
+        &7Invite a kingdom to
+        &7your nation.
+
+        {#FFD166}» &fClick and type its name
+      commands:
+        - 'k menu prompt nation-invite'
+    else:
+      name: ' '
+      material: GRAY_STAINED_GLASS_PANE
+    posx: 7
+    posy: 2
+  spawn:
+    has:
+      condition: kingdoms_has_nation
+      name: '{#FFD166}&lNation Spawn'
+      material: ENDER_EYE
+      flags: [ ALL ]
+      lore: |
+        &7Teleport to your
+        &7nation's spawn.
+
+        {#FFD166}» &fClick to teleport
+      commands:
+        - 'k menu run nation spawn'
+    else:
+      name: ' '
+      material: GRAY_STAINED_GLASS_PANE
+    posx: 4
+    posy: 3
+  leave:
+    has:
+      condition: kingdoms_has_nation
+      name: '{#EF476F}&lLeave Nation'
+      material: IRON_DOOR
+      flags: [ ALL ]
+      lore: |
+        &7Take your kingdom
+        &7out of the nation.
+
+        {#EF476F}» &fClick to leave
+      commands:
+        - 'k menu run nation leave'
+    else:
+      name: ' '
+      material: GRAY_STAINED_GLASS_PANE
+    posx: 6
+    posy: 3
+  back:
+    name: '&7« Back'
+    material: ARROW
+    flags: [ ALL ]
+    commands:
+      - 'k menu'
+    posx: 1
+    posy: 4
+  close:
+    name: '&c&lClose'
+    material: BARRIER
+    flags: [ ALL ]
+    commands:
+      - 'k menu close'
+    posx: 5
+    posy: 4
+  border:
+    name: ' '
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 28, 29, 30, 32, 33, 34, 35 ]
+  fill:
+    name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [ 10, 12, 14, 16, 19, 20, 22, 24, 25 ]

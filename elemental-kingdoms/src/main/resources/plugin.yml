@@ -1,0 +1,8 @@
+name: ElementalKingdoms
+version: '${project.version}'
+main: com.elementalmc.kingdoms.ElementalKingdoms
+api-version: '1.21'
+author: ElementalMC
+description: '${project.description}'
+depend: [Kingdoms]
+softdepend: [KingdomsX-Plots, Kingdoms-Addon-Outposts, Kingdoms-Addon-Peace-Treaties]

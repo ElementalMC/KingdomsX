@@ -1,0 +1,134 @@
+# ElementalKingdoms: one central menu for KingdomsX.
+#
+# /k menu opens the menu. With "open-on-bare-command" on, typing just /k (or /kingdoms, /kingdom, or any
+# other name of the Kingdoms main command) opens it too. /k help still lists the commands.
+#
+# The menu pages are normal KingdomsX GUI files: plugins/Kingdoms/guis/<language>/menu/*.yml
+# They're copied there on the first start, so you can restyle them like any other Kingdoms GUI.
+# A button runs one of these through "commands:" (as the player who clicked):
+#   k menu                      the main page (or the "start" page for players without a kingdom)
+#   k menu page <name>          menu/<name>.yml
+#   k menu open <target>        a nexus page directly: nexus, members, ranks, settings, turrets, structures,
+#                               misc-upgrades, champion-upgrades, shields, relations, banners,
+#                               resource-points, chest, nation-nexus, mailbox, logs
+#                               (KingdomsX still checks the player's kingdom permissions for every page)
+#   k menu run <command> [args] any Kingdoms command by its internal name, in any language,
+#                               e.g. "k menu run claim", "k menu run unclaim all", "k menu run home"
+#   k menu prompt <id>          asks the player to type something in chat, then runs the prompt below
+#   k menu close                closes the menu
+
+open-on-bare-command: true
+
+# On the first start, give the stock KingdomsX GUIs the same clean look as the menu: plain dark titles
+# instead of "-=[ Title ]=-" and one black glass background. Only looks change, never what a button does.
+# Changed files are backed up to plugins/ElementalKingdoms/gui-backups/<date>/ first. It runs once; delete
+# plugins/ElementalKingdoms/guis-restyled.txt and restart to run it again.
+restyle-kingdoms-guis: true
+
+# Together with the restyle (same one-time run): replace KingdomsX's stock colour macros in
+# plugins/Kingdoms/config.yml (placeholders.variables: p, s, sp, e, es, arrow, point, dot, ...) with the
+# ElementalMC palette, so all Kingdoms messages match. Macros you already changed yourself are left alone.
+# The original is kept as plugins/Kingdoms/config.yml.before-theme.
+modern-colors: true
+
+# Commands that the menu now covers, hidden from /k help so the list stays short. They still work when
+# typed. Internal names, so it works in every language. Use [] to show everything again.
+hide-from-help:
+  - gui
+  - invites
+  - joinRequests
+  - invitecodes
+  - relations
+  - rejectrelation
+  - mail
+  - language
+  - color
+  - lore
+  - tag
+  - book
+  - sneak
+  - glow
+  - statistics
+  - tradable
+  - vault
+  - inventory
+  - about
+  - updates
+
+# Chat prompts used by the menu. {input} is what the player typed. Typing "cancel" stops the prompt.
+prompt-timeout-seconds: 60
+prompt-cancel-word: cancel
+prompts:
+  create:
+    message: '&7Type a &fname for your kingdom &7in chat, or &ccancel&7.'
+    run: 'create {input}'
+  join:
+    message: '&7Type the &fname of the kingdom &7you want to join, or &ccancel&7.'
+    run: 'join {input}'
+  request-join:
+    message: '&7Type the &fname of the kingdom &7you want to ask to join, or &ccancel&7.'
+    run: 'requestJoin {input}'
+  invite:
+    message: '&7Type the &fname of the player &7you want to invite, or &ccancel&7.'
+    run: 'invite {input}'
+  kick:
+    message: '&7Type the &fname of the member &7you want to kick, or &ccancel&7.'
+    run: 'kick {input}'
+  rename:
+    message: '&7Type the &fnew name &7of your kingdom, or &ccancel&7.'
+    run: 'rename {input}'
+  tag:
+    message: '&7Type your kingdom''s new &ftag&7, or &ccancel&7.'
+    run: 'tag {input}'
+  lore:
+    message: '&7Type your kingdom''s new &flore&7, or &ccancel&7.'
+    run: 'lore {input}'
+  ally:
+    message: '&7Type the &fkingdom &7you want to ally with, or &ccancel&7.'
+    run: 'ally {input}'
+  truce:
+    message: '&7Type the &fkingdom &7you want a truce with, or &ccancel&7.'
+    run: 'truce {input}'
+  enemy:
+    message: '&7Type the &fkingdom &7you want to declare as an enemy, or &ccancel&7.'
+    run: 'enemy {input}'
+  revoke:
+    message: '&7Type the &fkingdom &7whose relation you want to reset to neutral, or &ccancel&7.'
+    run: 'revoke {input}'
+  bank-deposit:
+    message: '&7Type how much &fmoney &7to deposit into the kingdom bank, or &ccancel&7.'
+    run: 'bank deposit {input}'
+  bank-withdraw:
+    message: '&7Type how much &fmoney &7to withdraw from the kingdom bank, or &ccancel&7.'
+    run: 'bank withdraw {input}'
+  rp-withdraw:
+    message: '&7Type how many &fresource points &7to withdraw, or &ccancel&7.'
+    run: 'resourcepoints withdraw {input}'
+  donate:
+    message: '&7Type &f<kingdom> <amount> &7to donate resource points, or &ccancel&7.'
+    run: 'donate {input}'
+  tpa:
+    message: '&7Type the &fname of the member &7you want to teleport to, or &ccancel&7.'
+    run: 'tpa {input}'
+  outpost-join:
+    message: '&7Type the &fname of the outpost event &7to join, or &ccancel&7.'
+    run: 'outpost join {input}'
+  nation-create:
+    message: '&7Type a &fname for your nation&7, or &ccancel&7.'
+    run: 'nation create {input}'
+  nation-join:
+    message: '&7Type the &fname of the nation &7you want to join, or &ccancel&7.'
+    run: 'nation join {input}'
+  nation-invite:
+    message: '&7Type the &fkingdom &7you want to invite to your nation, or &ccancel&7.'
+    run: 'nation invite {input}'
+
+messages:
+  prompt-cancelled: '&7Cancelled.'
+  prompt-timeout: '&7You took too long to answer, so nothing was done.'
+  unknown-page: '&cThat menu page doesn''t exist: &f{page}'
+  unknown-target: '&cUnknown menu target: &f{target}'
+  unknown-command: '&cThe menu tried to run an unknown Kingdoms command: &f{command}'
+  unknown-prompt: '&cUnknown menu prompt: &f{prompt}'
+  no-kingdom: '&cYou need to be in a kingdom for that.'
+  no-nation: '&cYour kingdom needs to be in a nation for that.'

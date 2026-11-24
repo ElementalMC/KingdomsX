@@ -1,0 +1,134 @@
+title: '&8ᴋɪɴɢᴅᴏᴍ  ›  ᴍᴇᴍʙᴇʀѕ'
+rows: 4
+sound: UI_BUTTON_CLICK, 0.4, 1.4
+
+options:
+  list:
+    name: '{#FFD166}&lMembers'
+    material: PLAYER_HEAD
+    skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRiODlhZDA2ZDMxOGYwYWUxZWVhZjY2MGZlYTc4YzM0ZWI1NWQwNWYwMWUxY2Y5OTlmMzMxZmIzMmQzODk0MiJ9fX0='
+    flags: [ ALL ]
+    lore: |
+      &7Everyone in your kingdom.
+      &7Promote, demote or kick them.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open members'
+    posx: 2
+    posy: 2
+  ranks:
+    name: '{#FFD166}&lRanks & Permissions'
+    material: BOOKSHELF
+    flags: [ ALL ]
+    lore: |
+      &7Create ranks and choose
+      &7what each rank may do.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open ranks'
+    posx: 3
+    posy: 2
+  invite:
+    name: '{#FFD166}&lInvite a Player'
+    material: NAME_TAG
+    flags: [ ALL ]
+    lore: |
+      &7Invite someone to
+      &7your kingdom.
+
+      {#FFD166}» &fClick and type their name
+    commands:
+      - 'k menu prompt invite'
+    posx: 4
+    posy: 2
+  join-requests:
+    name: '{#FFD166}&lJoin Requests'
+    material: PAPER
+    flags: [ ALL ]
+    lore: |
+      &7Players asking to join.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu run joinRequests'
+    posx: 5
+    posy: 2
+  invite-codes:
+    name: '{#FFD166}&lInvite Codes'
+    material: TRIPWIRE_HOOK
+    flags: [ ALL ]
+    lore: |
+      &7Codes anyone can use
+      &7to join your kingdom.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu run invitecodes'
+    posx: 6
+    posy: 2
+  tpa:
+    name: '{#FFD166}&lTeleport to a Member'
+    material: ENDER_PEARL
+    flags: [ ALL ]
+    lore: |
+      &7Ask a member if you
+      &7can teleport to them.
+
+      {#FFD166}» &fClick and type their name
+    commands:
+      - 'k menu prompt tpa'
+    posx: 7
+    posy: 2
+  kick:
+    name: '{#EF476F}&lKick a Member'
+    material: LEATHER_BOOTS
+    flags: [ ALL ]
+    lore: |
+      &7Remove a member from
+      &7your kingdom.
+
+      {#EF476F}» &fClick and type their name
+    commands:
+      - 'k menu prompt kick'
+    posx: 8
+    posy: 2
+  leave:
+    name: '{#EF476F}&lLeave Kingdom'
+    material: IRON_DOOR
+    flags: [ ALL ]
+    lore: |
+      &7Leave your kingdom.
+      &7Kings must give the crown
+      &7to someone else first.
+
+      {#EF476F}» &fClick to leave
+    commands:
+      - 'k menu run leave'
+    posx: 5
+    posy: 3
+  back:
+    name: '&7« Back'
+    material: ARROW
+    flags: [ ALL ]
+    commands:
+      - 'k menu'
+    posx: 1
+    posy: 4
+  close:
+    name: '&c&lClose'
+    material: BARRIER
+    flags: [ ALL ]
+    commands:
+      - 'k menu close'
+    posx: 5
+    posy: 4
+  border:
+    name: ' '
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 28, 29, 30, 32, 33, 34, 35 ]
+  fill:
+    name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [ 19, 20, 21, 23, 24, 25 ]

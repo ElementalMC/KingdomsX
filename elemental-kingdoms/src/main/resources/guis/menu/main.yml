@@ -1,0 +1,180 @@
+# ElementalKingdoms: the central kingdom menu (/k menu, or just /k).
+# Every button runs a command as the player who clicks it. See plugins/ElementalKingdoms/config.yml for
+# the "k menu ..." commands that open pages, nexus pages, Kingdoms commands and chat prompts.
+title: '&8ᴋɪɴɢᴅᴏᴍ'
+rows: 5
+sound: UI_BUTTON_CLICK, 0.4, 1.4
+
+options:
+  members:
+    name: '{#FFD166}&lMembers'
+    material: PLAYER_HEAD
+    skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRiODlhZDA2ZDMxOGYwYWUxZWVhZjY2MGZlYTc4YzM0ZWI1NWQwNWYwMWUxY2Y5OTlmMzMxZmIzMmQzODk0MiJ9fX0='
+    flags: [ ALL ]
+    lore: |
+      &7Your members, ranks,
+      &7invites and join requests.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu page members'
+    posx: 2
+    posy: 2
+  land:
+    name: '{#FFD166}&lLand'
+    material: GRASS_BLOCK
+    flags: [ ALL ]
+    lore: |
+      &7Claim and unclaim land, the map,
+      &7plots and your kingdom home.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu page land'
+    posx: 4
+    posy: 2
+  buildings:
+    name: '{#FFD166}&lBuildings & Upgrades'
+    material: REDSTONE_LAMP
+    flags: [ ALL ]
+    lore: |
+      &7Turrets, structures, your champion
+      &7and kingdom upgrades.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu page buildings'
+    posx: 6
+    posy: 2
+  economy:
+    name: '{#FFD166}&lEconomy'
+    material: GOLD_INGOT
+    flags: [ ALL ]
+    lore: |
+      &7Resource points, the kingdom bank
+      &7and the nexus chest.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu page economy'
+    posx: 8
+    posy: 2
+  nexus:
+    name: '{#FFD166}&lNexus'
+    material: BEACON
+    flags: [ ALL ]
+    lore: |
+      &7The classic nexus menu with
+      &7everything in one place.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open nexus'
+    posx: 5
+    posy: 3
+  diplomacy:
+    name: '{#FFD166}&lDiplomacy'
+    material: BELL
+    flags: [ ALL ]
+    lore: |
+      &7Allies, truces and enemies,
+      &7mail and the top kingdoms.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu page diplomacy'
+    posx: 2
+    posy: 4
+  war:
+    name: '{#FFD166}&lWar'
+    material: IRON_SWORD
+    flags: [ ALL ]
+    lore: |
+      &7Invasions, shields, PvP
+      &7and outpost events.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu page war'
+    posx: 4
+    posy: 4
+  nation:
+    name: '{#FFD166}&lNation'
+    material: LODESTONE
+    flags: [ ALL ]
+    lore: |
+      &7Join forces with other kingdoms
+      &7as a nation.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu page nation'
+    posx: 6
+    posy: 4
+  settings:
+    name: '{#FFD166}&lSettings'
+    material: COMPARATOR
+    flags: [ ALL ]
+    lore: |
+      &7Kingdom settings, name, tag,
+      &7colour, flag and language.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu page settings'
+    posx: 8
+    posy: 4
+  home:
+    name: '{#FFD166}&lHome'
+    material: RED_BED
+    flags: [ ALL ]
+    lore: |
+      &7Teleport to your kingdom home.
+
+      {#FFD166}» &fClick to teleport
+    commands:
+      - 'k menu run home'
+    posx: 4
+    posy: 5
+  map:
+    name: '{#FFD166}&lMap'
+    material: FILLED_MAP
+    flags: [ ALL ]
+    lore: |
+      &7See the land around you.
+
+      {#FFD166}» &fClick to show
+    commands:
+      - 'k menu run map'
+    posx: 6
+    posy: 5
+  kingdom:
+    name: '{#FFD166}&l%kingdoms_kingdom_name%'
+    material: NETHER_STAR
+    flags: [ ALL ]
+    lore: |
+      &7Level{$colon} &f%kingdoms_kingdom_level%
+      &7Members{$colon} &f%kingdoms_online_members% online &8/ &f%kingdoms_members%
+      &7Lands{$colon} &f%kingdoms_claims% &8/ &f%kingdoms_max_claims%
+      &7Resource points{$colon} &f%kingdoms_kingdom_resource_points%
+      &7Bank{$colon} &f%kingdoms_kingdom_bank%
+
+      &7Your rank{$colon} %kingdoms_rank_color%%kingdoms_rank_symbol% %kingdoms_rank_name%
+    posx: 5
+    posy: 1
+  close:
+    name: '&c&lClose'
+    material: BARRIER
+    flags: [ ALL ]
+    commands:
+      - 'k menu close'
+    posx: 5
+    posy: 5
+  border:
+    name: ' '
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [ 0, 1, 2, 3, 5, 6, 7, 8, 9, 17, 18, 26, 27, 35, 36, 37, 38, 42, 43, 44 ]
+  fill:
+    name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [ 11, 13, 15, 19, 20, 21, 23, 24, 25, 29, 31, 33 ]

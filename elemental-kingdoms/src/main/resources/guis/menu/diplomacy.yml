@@ -1,0 +1,136 @@
+title: '&8ᴋɪɴɢᴅᴏᴍ  ›  ᴅɪᴘʟᴏᴍᴀᴄʏ'
+rows: 4
+sound: UI_BUTTON_CLICK, 0.4, 1.4
+
+options:
+  ally:
+    name: '{#06D6A0}&lAlly'
+    material: LIME_BANNER
+    flags: [ ALL ]
+    lore: |
+      &7Ask a kingdom to
+      &7become your ally.
+
+      {#06D6A0}» &fClick and type its name
+    commands:
+      - 'k menu prompt ally'
+    posx: 2
+    posy: 2
+  truce:
+    name: '{#FFD166}&lTruce'
+    material: YELLOW_BANNER
+    flags: [ ALL ]
+    lore: |
+      &7Ask a kingdom for
+      &7a truce.
+
+      {#FFD166}» &fClick and type its name
+    commands:
+      - 'k menu prompt truce'
+    posx: 3
+    posy: 2
+  enemy:
+    name: '{#EF476F}&lEnemy'
+    material: RED_BANNER
+    flags: [ ALL ]
+    lore: |
+      &7Declare a kingdom
+      &7as your enemy.
+
+      {#EF476F}» &fClick and type its name
+    commands:
+      - 'k menu prompt enemy'
+    posx: 4
+    posy: 2
+  revoke:
+    name: '&f&lNeutral'
+    material: WHITE_BANNER
+    flags: [ ALL ]
+    lore: |
+      &7Reset a relation
+      &7back to neutral.
+
+      &f» &fClick and type its name
+    commands:
+      - 'k menu prompt revoke'
+    posx: 5
+    posy: 2
+  relations:
+    name: '{#FFD166}&lRelation Rules'
+    material: WRITABLE_BOOK
+    flags: [ ALL ]
+    lore: |
+      &7Choose what allies, truces and
+      &7enemies may do on your land.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open relations'
+    posx: 6
+    posy: 2
+  requests:
+    name: '{#FFD166}&lRelation Requests'
+    material: PAPER
+    flags: [ ALL ]
+    lore: |
+      &7Requests from other
+      &7kingdoms.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu run relations'
+    posx: 7
+    posy: 2
+  mail:
+    name: '{#FFD166}&lMailbox'
+    material: PLAYER_HEAD
+    skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTVmYmJjNjI1ZmE0ZWI2NDk2YmU4ZGJiZjBhYTJiMjhmMTAyOTdjZmZiY2Y1ZTBhYWY2Y2IxMWU4ZjI2MTZlZCJ9fX0='
+    flags: [ ALL ]
+    lore: |
+      &7Send and read mail from
+      &7other kingdoms.
+
+      &7&7Unread{$colon} &f%kingdoms_mails_unread%
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open mailbox'
+    posx: 8
+    posy: 2
+  top:
+    name: '{#FFD166}&lTop Kingdoms'
+    material: GOLDEN_HELMET
+    flags: [ ALL ]
+    lore: |
+      &7The strongest kingdoms
+      &7on the server.
+
+      {#FFD166}» &fClick to show
+    commands:
+      - 'k menu run top'
+    posx: 5
+    posy: 3
+  back:
+    name: '&7« Back'
+    material: ARROW
+    flags: [ ALL ]
+    commands:
+      - 'k menu'
+    posx: 1
+    posy: 4
+  close:
+    name: '&c&lClose'
+    material: BARRIER
+    flags: [ ALL ]
+    commands:
+      - 'k menu close'
+    posx: 5
+    posy: 4
+  border:
+    name: ' '
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 28, 29, 30, 32, 33, 34, 35 ]
+  fill:
+    name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [ 19, 20, 21, 23, 24, 25 ]

@@ -1,0 +1,110 @@
+title: '&8ᴋɪɴɢᴅᴏᴍ  ›  ᴇᴄᴏɴᴏᴍʏ'
+rows: 4
+sound: UI_BUTTON_CLICK, 0.4, 1.4
+
+options:
+  resource-points:
+    name: '{#FFD166}&lResource Points'
+    material: SUNFLOWER
+    flags: [ ALL ]
+    lore: |
+      &7Turn items into resource points.
+
+      &7&7Kingdom RP{$colon} &f%kingdoms_kingdom_resource_points%
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open resource-points'
+    posx: 2
+    posy: 2
+  rp-withdraw:
+    name: '{#FFD166}&lWithdraw Resource Points'
+    material: HOPPER
+    flags: [ ALL ]
+    lore: |
+      &7Take resource points out
+      &7of your kingdom.
+
+      {#FFD166}» &fClick and type an amount
+    commands:
+      - 'k menu prompt rp-withdraw'
+    posx: 3
+    posy: 2
+  bank-deposit:
+    name: '{#06D6A0}&lDeposit Money'
+    material: GOLD_INGOT
+    flags: [ ALL ]
+    lore: |
+      &7Put money into the
+      &7kingdom bank.
+
+      &7&7Bank{$colon} &f%kingdoms_kingdom_bank%
+
+      {#06D6A0}» &fClick and type an amount
+    commands:
+      - 'k menu prompt bank-deposit'
+    posx: 5
+    posy: 2
+  bank-withdraw:
+    name: '{#FFD166}&lWithdraw Money'
+    material: GOLD_NUGGET
+    flags: [ ALL ]
+    lore: |
+      &7Take money out of the
+      &7kingdom bank.
+
+      {#FFD166}» &fClick and type an amount
+    commands:
+      - 'k menu prompt bank-withdraw'
+    posx: 6
+    posy: 2
+  chest:
+    name: '{#FFD166}&lNexus Chest'
+    material: CHEST
+    flags: [ ALL ]
+    lore: |
+      &7Items shared by the
+      &7whole kingdom.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open chest'
+    posx: 8
+    posy: 2
+  donate:
+    name: '{#FFD166}&lDonate'
+    material: EMERALD
+    flags: [ ALL ]
+    lore: |
+      &7Give resource points to
+      &7another kingdom.
+
+      {#FFD166}» &fClick and type kingdom and amount
+    commands:
+      - 'k menu prompt donate'
+    posx: 5
+    posy: 3
+  back:
+    name: '&7« Back'
+    material: ARROW
+    flags: [ ALL ]
+    commands:
+      - 'k menu'
+    posx: 1
+    posy: 4
+  close:
+    name: '&c&lClose'
+    material: BARRIER
+    flags: [ ALL ]
+    commands:
+      - 'k menu close'
+    posx: 5
+    posy: 4
+  border:
+    name: ' '
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 28, 29, 30, 32, 33, 34, 35 ]
+  fill:
+    name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [ 12, 15, 19, 20, 21, 23, 24, 25 ]

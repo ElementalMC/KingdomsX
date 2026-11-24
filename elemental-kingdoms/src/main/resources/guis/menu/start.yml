@@ -1,0 +1,119 @@
+title: '&8ᴋɪɴɢᴅᴏᴍѕ'
+rows: 4
+sound: UI_BUTTON_CLICK, 0.4, 1.4
+
+options:
+  create:
+    name: '{#FFD166}&lCreate a Kingdom'
+    material: NETHER_STAR
+    flags: [ ALL ]
+    lore: |
+      &7Found your own kingdom
+      &7and become its king.
+
+      {#FFD166}» &fClick and type a name
+    commands:
+      - 'k menu prompt create'
+    posx: 2
+    posy: 2
+  invites:
+    name: '{#FFD166}&lYour Invites'
+    material: WRITABLE_BOOK
+    flags: [ ALL ]
+    lore: |
+      &7Kingdoms that invited you.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu run invites'
+    posx: 4
+    posy: 2
+  join:
+    name: '{#FFD166}&lJoin a Kingdom'
+    material: OAK_DOOR
+    flags: [ ALL ]
+    lore: |
+      &7Join a public kingdom
+      &7or one that invited you.
+
+      {#FFD166}» &fClick and type its name
+    commands:
+      - 'k menu prompt join'
+    posx: 6
+    posy: 2
+  request-join:
+    name: '{#FFD166}&lAsk to Join'
+    material: PAPER
+    flags: [ ALL ]
+    lore: |
+      &7Send a join request
+      &7to a private kingdom.
+
+      {#FFD166}» &fClick and type its name
+    commands:
+      - 'k menu prompt request-join'
+    posx: 8
+    posy: 2
+  top:
+    name: '{#FFD166}&lTop Kingdoms'
+    material: GOLDEN_HELMET
+    flags: [ ALL ]
+    lore: |
+      &7The strongest kingdoms
+      &7on the server.
+
+      {#FFD166}» &fClick to show
+    commands:
+      - 'k menu run top'
+    posx: 3
+    posy: 3
+  map:
+    name: '{#FFD166}&lMap'
+    material: FILLED_MAP
+    flags: [ ALL ]
+    lore: |
+      &7See who owns the land
+      &7around you.
+
+      {#FFD166}» &fClick to show
+    commands:
+      - 'k menu run map'
+    posx: 5
+    posy: 3
+  language:
+    name: '{#FFD166}&lLanguage'
+    material: OAK_SIGN
+    flags: [ ALL ]
+    lore: |
+      &7Change your Kingdoms language.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu run language'
+    posx: 7
+    posy: 3
+  info:
+    name: '{#FFD166}&lKingdoms'
+    material: BOOK
+    flags: [ ALL ]
+    lore: |
+      &7You arent in a kingdom yet.
+      &7Create your own or join one.
+    posx: 5
+    posy: 1
+  close:
+    name: '&c&lClose'
+    material: BARRIER
+    flags: [ ALL ]
+    commands:
+      - 'k menu close'
+    posx: 5
+    posy: 4
+  border:
+    name: ' '
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [ 0, 1, 2, 3, 5, 6, 7, 8, 9, 17, 18, 26, 27, 28, 29, 30, 32, 33, 34, 35 ]
+  fill:
+    name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [ 11, 13, 15, 19, 21, 23, 25 ]

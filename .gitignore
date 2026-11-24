@@ -62,3 +62,7 @@ core/src/test/java/PrivateVault.java
 !KingdomsX Source Tool.py
 
 **/build
+# ElementalMC addon (Maven project, builds against the server's KingdomsX jar)
+!elemental-kingdoms/
+!elemental-kingdoms/**
+elemental-kingdoms/target/

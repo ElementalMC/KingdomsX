@@ -1,0 +1,160 @@
+title: '&8ᴋɪɴɢᴅᴏᴍ  ›  ʟᴀɴᴅ'
+rows: 4
+sound: UI_BUTTON_CLICK, 0.4, 1.4
+
+options:
+  claim:
+    name: '{#06D6A0}&lClaim This Land'
+    material: GRASS_BLOCK
+    flags: [ ALL ]
+    lore: |
+      &7Claim the chunk
+      &7you are standing in.
+
+      {#06D6A0}» &fClick to claim
+    commands:
+      - 'k menu run claim'
+    posx: 2
+    posy: 2
+  unclaim:
+    name: '{#EF476F}&lUnclaim This Land'
+    material: COARSE_DIRT
+    flags: [ ALL ]
+    lore: |
+      &7Give up the chunk
+      &7you are standing in.
+
+      {#EF476F}» &fClick to unclaim
+    commands:
+      - 'k menu run unclaim'
+    posx: 3
+    posy: 2
+  auto-claim:
+    name: '{#FFD166}&lAuto Claim'
+    material: GOLDEN_SHOVEL
+    flags: [ ALL ]
+    lore: |
+      &7Claim every chunk you
+      &7walk into. Click again to stop.
+
+      {#FFD166}» &fClick to toggle
+    commands:
+      - 'k menu run claim auto'
+    posx: 4
+    posy: 2
+  map:
+    name: '{#FFD166}&lMap'
+    material: FILLED_MAP
+    flags: [ ALL ]
+    lore: |
+      &7See who owns the land
+      &7around you.
+
+      {#FFD166}» &fClick to show
+    commands:
+      - 'k menu run map'
+    posx: 5
+    posy: 2
+  visualize:
+    name: '{#FFD166}&lShow Borders'
+    material: GLOWSTONE_DUST
+    flags: [ ALL ]
+    lore: |
+      &7Show the borders of
+      &7the land around you.
+
+      {#FFD166}» &fClick to show
+    commands:
+      - 'k menu run visualize'
+    posx: 6
+    posy: 2
+  plots:
+    name: '{#FFD166}&lPlots'
+    material: OAK_FENCE
+    flags: [ ALL ]
+    lore: |
+      &7Plots in your kingdom: buy,
+      &7rent or manage them.
+      &7&8Stand in a plot for its settings.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu run plot settings'
+    posx: 7
+    posy: 2
+  claims:
+    name: '{#FFD166}&lYour Claims'
+    material: WRITABLE_BOOK
+    flags: [ ALL ]
+    lore: |
+      &7A list of all your
+      &7kingdoms land.
+
+      {#FFD166}» &fClick to show
+    commands:
+      - 'k menu run claim list'
+    posx: 8
+    posy: 2
+  set-home:
+    name: '{#FFD166}&lSet Home Here'
+    material: RED_BED
+    flags: [ ALL ]
+    lore: |
+      &7Move your kingdom home
+      &7to where you stand.
+
+      {#FFD166}» &fClick to set
+    commands:
+      - 'k menu run sethome'
+    posx: 4
+    posy: 3
+  home:
+    name: '{#FFD166}&lTeleport Home'
+    material: ENDER_EYE
+    flags: [ ALL ]
+    lore: |
+      &7Teleport to your
+      &7kingdom home.
+
+      {#FFD166}» &fClick to teleport
+    commands:
+      - 'k menu run home'
+    posx: 5
+    posy: 3
+  unclaim-all:
+    name: '{#EF476F}&lUnclaim All'
+    material: TNT
+    flags: [ ALL ]
+    lore: |
+      &7Give up all of your
+      &7kingdoms land. Asks first.
+
+      {#EF476F}» &fClick to unclaim all
+    commands:
+      - 'k menu run unclaim all'
+    posx: 6
+    posy: 3
+  back:
+    name: '&7« Back'
+    material: ARROW
+    flags: [ ALL ]
+    commands:
+      - 'k menu'
+    posx: 1
+    posy: 4
+  close:
+    name: '&c&lClose'
+    material: BARRIER
+    flags: [ ALL ]
+    commands:
+      - 'k menu close'
+    posx: 5
+    posy: 4
+  border:
+    name: ' '
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 28, 29, 30, 32, 33, 34, 35 ]
+  fill:
+    name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [ 19, 20, 24, 25 ]

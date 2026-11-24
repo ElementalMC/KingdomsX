@@ -1,0 +1,145 @@
+title: '&8ᴋɪɴɢᴅᴏᴍ  ›  ѕᴇᴛᴛɪɴɢѕ'
+rows: 4
+sound: UI_BUTTON_CLICK, 0.4, 1.4
+
+options:
+  settings:
+    name: '{#FFD166}&lKingdom Settings'
+    material: COMPARATOR
+    flags: [ ALL ]
+    lore: |
+      &7Public or private, PvP,
+      &7taxes and more.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open settings'
+    posx: 2
+    posy: 2
+  banners:
+    name: '{#FFD166}&lFlag'
+    material: WHITE_BANNER
+    flags: [ ALL ]
+    lore: |
+      &7Choose your kingdoms
+      &7banner and flag.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open banners'
+    posx: 3
+    posy: 2
+  color:
+    name: '{#FFD166}&lColour'
+    material: ORANGE_DYE
+    flags: [ ALL ]
+    lore: |
+      &7Your kingdoms colour on
+      &7the map and in chat.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu run color'
+    posx: 4
+    posy: 2
+  rename:
+    name: '{#FFD166}&lRename'
+    material: NAME_TAG
+    flags: [ ALL ]
+    lore: |
+      &7Give your kingdom
+      &7a new name.
+
+      {#FFD166}» &fClick and type a name
+    commands:
+      - 'k menu prompt rename'
+    posx: 5
+    posy: 2
+  tag:
+    name: '{#FFD166}&lTag'
+    material: OAK_HANGING_SIGN
+    flags: [ ALL ]
+    lore: |
+      &7The short tag shown
+      &7next to names.
+
+      {#FFD166}» &fClick and type a tag
+    commands:
+      - 'k menu prompt tag'
+    posx: 6
+    posy: 2
+  lore:
+    name: '{#FFD166}&lLore'
+    material: WRITABLE_BOOK
+    flags: [ ALL ]
+    lore: |
+      &7A short description
+      &7of your kingdom.
+
+      {#FFD166}» &fClick and type the lore
+    commands:
+      - 'k menu prompt lore'
+    posx: 7
+    posy: 2
+  language:
+    name: '{#FFD166}&lLanguage'
+    material: OAK_SIGN
+    flags: [ ALL ]
+    lore: |
+      &7Change your Kingdoms language.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu run language'
+    posx: 8
+    posy: 2
+  logs:
+    name: '{#FFD166}&lAudit Logs'
+    material: KNOWLEDGE_BOOK
+    flags: [ ALL ]
+    lore: |
+      &7Invasions, claims and what
+      &7your members did.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open logs'
+    posx: 4
+    posy: 3
+  disband:
+    name: '{#EF476F}&lDisband Kingdom'
+    material: TNT
+    flags: [ ALL ]
+    lore: |
+      &7Delete your kingdom for good.
+      &7Asks first.
+
+      {#EF476F}» &fClick to disband
+    commands:
+      - 'k menu run disband'
+    posx: 6
+    posy: 3
+  back:
+    name: '&7« Back'
+    material: ARROW
+    flags: [ ALL ]
+    commands:
+      - 'k menu'
+    posx: 1
+    posy: 4
+  close:
+    name: '&c&lClose'
+    material: BARRIER
+    flags: [ ALL ]
+    commands:
+      - 'k menu close'
+    posx: 5
+    posy: 4
+  border:
+    name: ' '
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 28, 29, 30, 32, 33, 34, 35 ]
+  fill:
+    name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [ 19, 20, 22, 24, 25 ]

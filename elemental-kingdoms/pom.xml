@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.elementalmc</groupId>
+    <artifactId>ElementalKingdoms</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>ElementalKingdoms</name>
+    <description>ElementalMC additions for KingdomsX: one central /k menu that reaches every kingdom feature.</description>
+
+    <properties>
+        <!-- Java 21 bytecode runs on the Java 25 that Paper 26.x needs, and compiles here. -->
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Built against an older API on purpose: only long-stable Bukkit API is used, so the
+             jar loads on the server's Paper 26.2. -->
+        <paper.version>1.21-R0.1-SNAPSHOT</paper.version>
+        <kingdoms.version>1.17.28</kingdoms.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>${paper.version}</version>
+            <scope>provided</scope>
+            <!-- Not referenced by this addon; skipping it keeps the build off the Mojang repo. -->
+            <exclusions>
+                <exclusion>
+                    <groupId>com.mojang</groupId>
+                    <artifactId>brigadier</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- The server's KingdomsX. 1.17.28 is not on Maven Central, so install the jar once:
+             mvn install:install-file -Dfile=KingdomsX-1.17.28.jar -DgroupId=com.github.cryptomorin
+                 -DartifactId=kingdoms -Dversion=1.17.28 -Dpackaging=jar -->
+        <dependency>
+            <groupId>com.github.cryptomorin</groupId>
+            <artifactId>kingdoms</artifactId>
+            <version>${kingdoms.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Vault is optional at runtime: free plots work without it. -->
+        <dependency>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.bukkit</groupId>
+                    <artifactId>bukkit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>plugin.yml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>plugin.yml</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.14.0</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                    <compilerArgs>
+                        <arg>-Xlint:all,-processing,-classfile,-serial</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

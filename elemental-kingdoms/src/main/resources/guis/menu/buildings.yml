@@ -1,0 +1,81 @@
+title: '&8ᴋɪɴɢᴅᴏᴍ  ›  ʙᴜɪʟᴅɪɴɢѕ'
+rows: 4
+sound: UI_BUTTON_CLICK, 0.4, 1.4
+
+options:
+  turrets:
+    name: '{#FFD166}&lTurrets'
+    material: ARROW
+    flags: [ ALL ]
+    lore: |
+      &7Buy turrets that defend
+      &7your land automatically.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open turrets'
+    posx: 2
+    posy: 2
+  structures:
+    name: '{#FFD166}&lStructures'
+    material: REDSTONE_LAMP
+    flags: [ ALL ]
+    lore: |
+      &7Outposts, warp pads, extractors
+      &7and other structures.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open structures'
+    posx: 4
+    posy: 2
+  champion:
+    name: '{#FFD166}&lChampion Upgrades'
+    material: ZOMBIE_HEAD
+    flags: [ ALL ]
+    lore: |
+      &7Make your champion stronger
+      &7against invaders.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open champion-upgrades'
+    posx: 6
+    posy: 2
+  misc:
+    name: '{#FFD166}&lKingdom Upgrades'
+    material: ENCHANTING_TABLE
+    flags: [ ALL ]
+    lore: |
+      &7Upgrades that help your
+      &7whole kingdom.
+
+      {#FFD166}» &fClick to open
+    commands:
+      - 'k menu open misc-upgrades'
+    posx: 8
+    posy: 2
+  back:
+    name: '&7« Back'
+    material: ARROW
+    flags: [ ALL ]
+    commands:
+      - 'k menu'
+    posx: 1
+    posy: 4
+  close:
+    name: '&c&lClose'
+    material: BARRIER
+    flags: [ ALL ]
+    commands:
+      - 'k menu close'
+    posx: 5
+    posy: 4
+  border:
+    name: ' '
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 28, 29, 30, 32, 33, 34, 35 ]
+  fill:
+    name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [ 11, 13, 15, 19, 20, 21, 22, 23, 24, 25 ]
